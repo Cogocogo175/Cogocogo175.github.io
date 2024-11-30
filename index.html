@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorema de Bolzano para Sucesiones</title>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4e9d7; /* Verde pastel */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 20px; /* Margen arriba */
+            padding-bottom: 20px; /* Margen abajo */
+        }
+        .header {
+            background: #b8e1d2;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .menu-button {
+            background: #b8e1d2;
+            border: none;
+            border-radius: 0px;
+            padding: 10px 15px;
+            font-size: 25px;
+            cursor: pointer;
+            
+        }
+        .menu-button:hover {
+            background-color: #f0f0f0;
+        }
+        .menu {
+            position: relative;
+            top: -10px;
+            left: 280px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            display: none;
+            flex-direction: column;
+            z-index: 500;
+        }
+        .menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        .menu a:hover {
+            background: #b8e1d2;
+        }
+        .menu a:last-child {
+            border-bottom: none;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+        h1, h3 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 0.9em;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>CALCULO INFINITESIMAL I</h1>      
+ 	<button class="menu-button" onclick="toggleMenu()">☰</button>
+    </div>
+
+
+        <div id="menu" class="menu">
+            <!-- Aquí irán los elementos del menú -->
+            <a href="#teorema">Teorema de Bolzano</a>
+            <a href="#demostracion">Demostración</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    <div class="container">
+
+        <h2 id="teorema">Teorema de Bolzano para Sucesiones</h2>
+        <p>
+            El <strong>Teorema de Bolzano</strong> para sucesiones establece lo siguiente:
+        </p>
+        <p>
+            Toda sucesión acotada en \( \mathbb{R} \) tiene al menos una subsucesión convergente.
+        </p>
+        <h3 id="demostracion">Demostración</h3>
+        <p>
+            Sea \( \{a_n\} \) una sucesión acotada en \( \mathbb{R} \), es decir, existe un número \( M > 0 \) tal que:
+        </p>
+        <p>
+            \[
+            |a_n| \leq M \quad \text{para todo } n \in \mathbb{N}.
+            \]
+        </p>
+        <p>
+            Por el principio del supremo, el intervalo \([-M, M]\) puede dividirse en dos partes: \([-M, 0]\) y \([0, M]\). 
+            Al menos una de estas partes contiene una cantidad infinita de términos de la sucesión, ya que \( \{a_n\} \) es infinita.
+        </p>
+        <p>
+            Elegimos una de estas mitades (digamos que es \([c_1, d_1]\)) y repetimos el proceso, dividiendo el intervalo en dos mitades de igual longitud. 
+            Por inducción, obtenemos una sucesión de intervalos cerrados y anidados:
+        </p>
+        <p>
+            \[
+            [c_1, d_1] \supseteq [c_2, d_2] \supseteq [c_3, d_3] \supseteq \cdots
+            \]
+        </p>
+        <p>
+            Además, las longitudes de los intervalos satisfacen:
+        </p>
+        <p>
+            \[
+            d_{n+1} - c_{n+1} = \frac{d_n - c_n}{2}.
+            \]
+        </p>
+        <p>
+            Por el Teorema de Cantor, existe un único punto \( L \in \mathbb{R} \) tal que:
+        </p>
+        <p>
+            \[
+            \bigcap_{n=1}^\infty [c_n, d_n] = \{L\}.
+            \]
+        </p>
+        <p>
+            Construimos una subsucesión \( \{a_{n_k}\} \) tomando un término de \( \{a_n\} \) en cada intervalo \([c_k, d_k]\). Entonces, \( \{a_{n_k}\} \) converge al punto \( L \).
+        </p>
+    </div>
+    <div class="copyright">
+        &copy;  Víctor Gómez Gadea - 2024
+    </div>
+</body>
+</html>
