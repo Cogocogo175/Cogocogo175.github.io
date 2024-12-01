@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Genérico - Biblioteca de Matemáticas</title>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Función para mostrar/ocultar el menú
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <div class="header">
+        <h1>CURSO DE MATEMÁTICAS GRATUITO</h1>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    </div>
+    <!-- Menú desplegable -->
+    <div id="menu" class="menu">
+        <a href="#curso1">1º Curso</a>
+        <a href="#curso2">2º Curso</a>
+        <a href="#curso3">3º Curso</a>
+        <a href="#curso4">4º Curso</a>
+    </div>
+    <!-- Contenido principal -->
+    <div class="container">
+        <h2>Bienvenido al curso de Matemáticas</h2>
+        <p>
+            Este sitio web ofrece contenido detallado y estructurado basado en los planes de estudio de matemáticas
+            impartidos en España. Encuentra recursos para aprender de forma rigurosa y gratuita.
+        </p>
+        <h3>Contenido del curso</h3>
+        <ul>
+            <li><a href="#tema1">Tema 1: Álgebra Lineal</a></li>
+            <li><a href="#tema2">Tema 2: Cálculo Diferencial</a></li>
+            <li><a href="#tema3">Tema 3: Geometría Euclidiana</a></li>
+            <li><a href="#tema4">Tema 4: Teoría de Números</a></li>
+        </ul>
+        <p>
+            Usa el menú para explorar diferentes cursos o navega directamente por los temas de este curso genérico.
+        </p>
+    </div>
+    <!-- Pie de página -->
+    <div class="copyright">
+        &copy; Víctor Gómez Gadea - 2024
+    </div>
+</body>
+
+</html>
