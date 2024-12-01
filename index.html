@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teorema de Bolzano para Sucesiones</title>
+    <title>Página Principal - Biblioteca de Matemáticas</title>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -40,7 +40,6 @@
             padding: 10px 15px;
             font-size: 25px;
             cursor: pointer;
-            
         }
         .menu-button:hover {
             background-color: #f0f0f0;
@@ -78,10 +77,10 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             width: 100%;
+            text-align: center;
         }
         h1, h3 {
             color: #2c3e50;
-            text-align: center;
         }
         h2 {
             color: #2c3e50;
@@ -108,70 +107,34 @@
 </head>
 <body>
     <div class="header">
-        <h1>CALCULO INFINITESIMAL I</h1>      
- 	<button class="menu-button" onclick="toggleMenu()">☰</button>
+        <h1>CURSO DE MATEMÁTICAS GRATUITO</h1>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
     </div>
-
-
-        <div id="menu" class="menu">
-            <!-- Aquí irán los elementos del menú -->
-            <a href="#teorema">Teorema de Bolzano</a>
-            <a href="#demostracion">Demostración</a>
-            <a href="#contacto">Contacto</a>
-        </div>
+    <div id="menu" class="menu">
+        <a href="#curso1">1º Curso</a>
+        <a href="#curso2">2º Curso</a>
+        <a href="#curso3">3º Curso</a>
+        <a href="#curso4">4º Curso</a>
+    </div>
     <div class="container">
-
-        <h2 id="teorema">Teorema de Bolzano para Sucesiones</h2>
+        <h2>Bienvenido al curso de Matemáticas</h2>
         <p>
-            El <strong>Teorema de Bolzano</strong> para sucesiones establece lo siguiente:
+            Este sitio web es un curso gratuito y completo que reúne todo el contenido de una carrera de matemáticas convencional, basado en los planes de estudios impartidos en España. 
+            Nuestra misión es proporcionar acceso abierto a una formación matemática de calidad para estudiantes, autodidactas y entusiastas.
         </p>
         <p>
-            Toda sucesión acotada en \( \mathbb{R} \) tiene al menos una subsucesión convergente.
+            Aquí encontrarás contenido detallado y estructurado por cursos, incluyendo apuntes, demostraciones, ejemplos y ejercicios. El objetivo es que tengas a tu disposición todos los recursos necesarios para aprender matemáticas de forma rigurosa y organizada.
         </p>
-        <h3 id="demostracion">Demostración</h3>
+        <h3>Explora los cursos</h3>
         <p>
-            Sea \( \{a_n\} \) una sucesión acotada en \( \mathbb{R} \), es decir, existe un número \( M > 0 \) tal que:
+            Usa el menú para navegar entre los cursos disponibles. Cada sección está diseñada para cubrir las materias específicas de cada año académico.
         </p>
-        <p>
-            \[
-            |a_n| \leq M \quad \text{para todo } n \in \mathbb{N}.
-            \]
-        </p>
-        <p>
-            Por el principio del supremo, el intervalo \([-M, M]\) puede dividirse en dos partes: \([-M, 0]\) y \([0, M]\). 
-            Al menos una de estas partes contiene una cantidad infinita de términos de la sucesión, ya que \( \{a_n\} \) es infinita.
-        </p>
-        <p>
-            Elegimos una de estas mitades (digamos que es \([c_1, d_1]\)) y repetimos el proceso, dividiendo el intervalo en dos mitades de igual longitud. 
-            Por inducción, obtenemos una sucesión de intervalos cerrados y anidados:
-        </p>
-        <p>
-            \[
-            [c_1, d_1] \supseteq [c_2, d_2] \supseteq [c_3, d_3] \supseteq \cdots
-            \]
-        </p>
-        <p>
-            Además, las longitudes de los intervalos satisfacen:
-        </p>
-        <p>
-            \[
-            d_{n+1} - c_{n+1} = \frac{d_n - c_n}{2}.
-            \]
-        </p>
-        <p>
-            Por el Teorema de Cantor, existe un único punto \( L \in \mathbb{R} \) tal que:
-        </p>
-        <p>
-            \[
-            \bigcap_{n=1}^\infty [c_n, d_n] = \{L\}.
-            \]
-        </p>
-        <p>
-            Construimos una subsucesión \( \{a_{n_k}\} \) tomando un término de \( \{a_n\} \) en cada intervalo \([c_k, d_k]\). Entonces, \( \{a_{n_k}\} \) converge al punto \( L \).
+	<p>
+        Actualmente la pagina se encuentra en sus inicios, espero que poco a poco vaya creciendo.
         </p>
     </div>
     <div class="copyright">
-        &copy;  Víctor Gómez Gadea - 2024
+        &copy; Víctor Gómez Gadea - 2024
     </div>
 </body>
 </html>
