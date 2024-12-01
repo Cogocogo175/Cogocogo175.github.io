@@ -45,14 +45,14 @@ body {
 /* Menú */
 .menu {
     position: absolute; /* Cambia de relative a absolute */
-    top: 80px; /* Ajusta según la posición deseada */
+    top: 120px; /* Ajusta según la posición deseada */
     left: 50%; /* Centra horizontalmente */
-    transform: translateX(-50%);
+    transform: translateX(166%);
     background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 150px;
     display: none; /* Ocultar por defecto */
     flex-direction: column;
     z-index: 500;
