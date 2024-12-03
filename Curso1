@@ -25,10 +25,10 @@
     </div>
     <!-- Menú desplegable -->
     <div id="menu" class="menu">
-        <a href="#curso1">1º Curso</a>
-        <a href="#curso2">2º Curso</a>
-        <a href="#curso3">3º Curso</a>
-        <a href="#curso4">4º Curso</a>
+        <a href="curso1.html">1º Curso</a>
+        <a href="curso2.html">2º Curso</a>
+        <a href="curso3.html">3º Curso</a>
+        <a href="curso4.html">4º Curso</a>
     </div>
     <!-- Contenido principal -->
     <div class="container">
